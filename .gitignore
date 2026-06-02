@@ -1,37 +1,56 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
-/.next
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+secrets/
 *.pem
+*.key
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
 
-# local env files
-.env*.local
+# Packaging and build output
+build/
+dist/
+*.egg-info/
 
-# vercel
-.vercel
+# Notebooks and editor files
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Agent and editor tooling kept on the workstation
+.agents/
+.codex/
+.cursor/
+.cursorignore
+.cursorindexingignore
+
+# Restricted source and derived data
+DatasetOfCAIP/
+data/raw/
+data/interim/
+data/processed/
+private-fixtures/
+
+# Generated experiments, models, and private reports
+artifacts/
+reports/generated/
+reports/private/
+
+# Runtime output
+logs/
+tmp/
+*.log
